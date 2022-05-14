@@ -5,6 +5,7 @@ module.exports.constants = {
     'NO_CONTENT': 204,
     'SEE_OTHER': 303,
     'BAD_REQUEST': 400,
+    'UNAUTHORIZED': 401,
     'FORBIDDEN': 403,
     'NOT_FOUND': 404,
     'BAD_METHOD': 405,
@@ -20,10 +21,11 @@ module.exports.messages = {
     'BAD_REQUEST_ATTR': "The request object is missing at least one of the required attributes",
     'BAD_REQUEST_ID': "Attribute 'id' can not be modified.",
     'BAD_REQUEST_NAME': `Boat name is invalid. Names must be ${this.constants.name_length} characters or less and contain no numbers or special characters.`,
-    'FORBIDDEN': "Boat name has already been used. Please use a unique name.",
+    'FORBIDDEN': "Boat is owned by someone else or boat does not exist",
     'ERROR': "Something went wrong creating the boat. Please try again",
     'ERROR_CONTENT': "Content type got messed up. Please try again.",
     'NOT_ACCEPTABLE': 'Response must be sent as ',
     'NOT_FOUND': "No boat with this boat_id exists",
     'UNSUPPORTED': "Data must be sent as Content-Type: application/json",
+    'UNAUTHORIZED': "Not authorized to access this resource."
 }

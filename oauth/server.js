@@ -92,6 +92,7 @@ async function getProfile(token) {
 
     } catch (err) {
         console.log('getProfile', err);
+        // console.log('error: ', err.response.data.error);
     }
 }
 
@@ -122,6 +123,7 @@ app.get('/oauth', async (req, res) => {
     
     try{
         const state_exists = await checkState(req.query.state);
+
         if (state_exists) {
             const auth_code = req.query.code;
             const token = await getToken(auth_code);
