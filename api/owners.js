@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 const ds = require('../lib/datastore');
 const constants = require('../lib/constants');
-const boats = require('./boats');
 
 const datastore = ds.datastore;
 
